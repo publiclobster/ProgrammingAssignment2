@@ -1,16 +1,16 @@
-## the idea is that my first function will create a matrix object 
-## which can chache its inverse
-## The second function will compute the inverse of makeCacheMatrix() if the
-## inverse has not all ready been calculated. Otherwise it will retieve the 
-## invers from the chace.
+# the idea is that my first function will create a matrix object 
+# which can chache its inverse
+# The second function will compute the inverse of makeCacheMatrix() if the
+# inverse has not all ready been calculated. Otherwise it will retieve the 
 
-## @z: a square invertible matrix
-  ## return: a list containing functions to
-  ##              1. set the matrix
-  ##              2. get the matrix
-  ##              3. set the inverse
-  ##              4. get the inverse
-  ##         this list is used as the input to cacheSolve()
+
+# @z: a square invertible matrix
+  # return: a list containing functions to
+  #              1. set the matrix
+  #              2. get the matrix
+  #              3. set the inverse
+  #              4. get the inverse
+  #         this list is used as the input to cacheSolve()
 
 makeCacheMatrix <- function(z = matrix()) {
   
@@ -26,10 +26,10 @@ makeCacheMatrix <- function(z = matrix()) {
 }
 
 
-## z is the output from makeCacheMatrix formula
-## in the following I'll return the input to makeCacheMatrix() matrixs' inverse 
-## note: if the inverse has already been calculated, it will take from cache 
-## and will not calculate inverse
+# z is the output from makeCacheMatrix formula
+# in the following I'll return the input to makeCacheMatrix() matrixs' inverse 
+# note: if the inverse has already been calculated, it will take from cache 
+# and will not calculate inverse
 
 cacheSolve <- function(z, ...) {
   inv = z$getinv()
@@ -49,3 +49,5 @@ cacheSolve <- function(z, ...) {
   
   return(inv)
 }
+
+# this was my second attempt
